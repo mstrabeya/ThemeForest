@@ -185,7 +185,7 @@ button{
         top: 0;
         left: -100%;
         transition: all 0.5s;
-        height: 42.5vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -215,7 +215,7 @@ button{
         padding: 10px 5%;
     }
     header{
-        height: 41vh;
+        height: 100vh;
     }
     header h1{
         font-size: 20px;
