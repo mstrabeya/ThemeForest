@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    padding: 5px 15%;
+}
+.f-color{
+    color: red;
+}
+.t-center{
+    text-align: center;
+}
+/*---nav---*/
+nav{
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+.menu{
+    width: 80%;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+nav ul li a{
+    padding: 30px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: red;
+}
+nav ul li a:hover{
+    background: rgba(175, 119, 105, 0.6);
+    color: white;
+}
+/*--menu-2--*/
+#check{
+    display: none;
+}
+.icon{
+    display: none;
+}
+/*----header section----*/
+header{
+    background: url(img/header-img.png);
+    color: white;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+header::after{
+    content: '';
+    clear: both;
+    display: block;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+header p{
+    padding: 20px 0px;
+    line-height: 25px;
+}
+button{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+/*---about us---*/
+.head{
+    margin: 20px 0px;
+   
+}
+.head h2{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+.head hr{
+    border: none;
+    background: red;
+    height: 2px;
+    width: 12%;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.head h2::after{
+    content: '';
+    clear: both;
+    display: block;
+    background: red;
+    position: absolute;
+    left: 50%;
+    bottom: -60%;
+    transform: translate(-50%,0);
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+}
+.about .row{
+    display: flex;
+    justify-content: center;
+}
+.pic{
+    margin: 20px 2%;
+}
+.about-text h3{
+    margin: 0px;
+}
+.about-text p{
+    line-height: 25px;
+    padding: 10px 0px;
+}
+.about-text{
+    margin: 20px 1%;
+}
+/*---more about us---*/
+.more-about-us{
+    background: url(img/background-1.png);
+    background-size: cover;
+    padding: 7% 0px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.more-about-us::after{
+    content: '';
+    clear: both;
+    display: block;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.more-about-us .font{
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+@media screen and (max-width:700px) {
+    nav .logo img{
+        width: 70%;
+    }
+    #check{
+        display: none;
+    }
+    .icon{
+        display: block;
+        color: white;
+        display: flex;
+        justify-content: end;
+    }
+    .menu{
+        z-index: 1;
+    }
+    .menu ul{
+        background: black;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: all 0.5s;
+        height: 42.5vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: -1;
+    }
+    .menu ul li{
+        list-style: none;
+        display: block;
+    }
+    .menu ul li a{
+        padding: 10px 0px;
+        text-decoration: none;
+        font-size: 17px;
+        display: inline-block;
+        color: white;
+    }
+    .menu ul li a:hover{
+        color: red;
+        background-color: transparent;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .container{
+        padding: 10px 5%;
+    }
+    header{
+        height: 41vh;
+    }
+    header h1{
+        font-size: 20px;
+    }
+    header p{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .about .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .head h2{
+        font-size: 20px;
+    }
+    .head hr{
+        width: 23%;
+    }
+    .head h2::after{
+        bottom: -70%;
+    }
+}
